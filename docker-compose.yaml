@@ -1,9 +1,9 @@
 version: '3.8'
 services:
   web:
-    image: nginx-https
+    image: ng
     ports:
-      - "81:81"
+      - "80:81"
       - "443:443"
       - "8081:8081"
       - "8082:8082"
@@ -13,6 +13,5 @@ services:
   apache:
     image: php:7.2-apache
     ports:
-      - "80:80"
     volumes:
       - ./info.php:/var/www/html/info.php
