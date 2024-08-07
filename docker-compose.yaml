@@ -12,6 +12,7 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
   apache:
     image: php:7.2-apache
+    container_name: apache_container
     ports:
     volumes:
       - ./info.php:/var/www/html/info.php
